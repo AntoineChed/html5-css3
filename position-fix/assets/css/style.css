@@ -1,0 +1,136 @@
+/* Style Appliqué directement au corps de la page HTML */
+body {
+    font-family: 'Roboto'; /* Tous les textes utiliseront la police Google Font */
+    font-size: 16px;
+
+    background: url("../images/background-image.jpg");
+}
+
+.container {
+    width: 1024px;
+    margin: auto;
+    
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    background-color: #dddddd;
+
+    padding:10px;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+/*
+    CSS utilisé pour le menu
+ */
+ul.menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Pour enlever la puce devant le texte du LI */
+}
+ul.menu li {
+    margin-left: 2px;
+    text-align: center;
+}
+ul.menu li a {
+    display: block; /* Par défaut un lien a est en display inline */
+    float: left; /* Positionnement flottant à gauche */
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #597aed; /* Une couleur peut être désignée par son code hexadécimal */
+    color: white; /* Une couleur peut être désignée par son raccourci */
+    text-decoration: none; /* pour éviter que la balise a n'affiche un souligné sous le texte */
+}
+ul.menu li a:hover {
+    background-color: #1226ed;
+    color:white;
+}
+
+form input[type=search] {
+    width: 220px;
+}
+
+/*
+    CSS utilisé pour la barre latérale
+ */
+aside{
+    float:right;
+    width: 25%;
+    margin-right: 0;
+    margin-left: 1%;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+}
+
+
+/*
+    CSS utilisé pour l'article
+ */
+article {
+    text-align: justify;
+}
+
+
+/*
+    CSS utilisé pour le pied de page
+ */
+footer{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+
+    font-size: 0.8em;
+}
+
+footer div.title {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+
+/*
+    CSS Bloc Position Fixe
+ */
+#block-fix {
+    position: fixed; /* Défini le positionnement à fixe */
+    top: 95px; /* Défini le positionnement sur l'écran pour l'axe Y */
+    left: 1%; /* Défini le positionnement sur l'écran pour l'axe X */
+
+    width: 185px;
+    height: 340px;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 12px #555;
+    background: #629643;
+
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+
+    padding: 15px 5px 5px;
+}
+
+/*
+    Condition d'affichage du bloc fixe : masqué si la résolution de l'écran est inférieure à 1470 pixels, affiché si supérieure
+ */
+@media screen and (max-width: 1470px) {
+    #block-fix {
+        display: none;
+    }
+}
