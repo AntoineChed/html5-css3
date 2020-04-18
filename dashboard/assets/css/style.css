@@ -1,0 +1,219 @@
+/* Style Appliqué directement au corps de la page HTML */
+body {
+    font-family: 'Roboto'; /* Tous les textes utiliseront la police Google Font */
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Définition générale du positionnement sur la page */
+.grid-container {
+    display: grid; /* affichage en mode grid */
+    grid-template-columns: 260px 1fr; /* 2 colonnes : 1 de 260 pixels de large, l'autre du reste (fraction) */
+    grid-template-rows: 60px 1fr 42px; /* 3 lignes : 50px de haut pour le header, 50 px de haut pour le footer */
+    grid-template-areas:
+            "aside header"
+            "aside main"
+            "aside footer"; /* Disposition des élements */
+    height: 100vh; /* hauteur : tout le viewport */
+}
+
+/* Définition des zones */
+.header {
+    grid-area: header;
+    background-color: #466f8a;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #394263;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ddd;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #466f8a;
+}
+
+
+/*
+    Header
+ */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.header-collapse{
+    color: #ddd;
+}
+
+.header-collapse:hover{
+    cursor: pointer;
+}
+
+.header-profil{
+    color: #ddd;
+    display: inline-block;
+}
+
+.header-profil i{
+    font-size:2em;
+    vertical-align: middle;
+    padding-left:10px;
+}
+
+.header-profil:hover{
+    cursor:pointer;
+}
+
+/*
+    Aside
+ */
+.aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+}
+
+.aside-logo{
+    margin: 0;
+    padding-left: 30px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.aside-logo i{
+    padding-right: 10px;
+}
+
+.aside-links {
+    padding: 0;
+    margin-top: 54px;
+    list-style-type: none;
+}
+
+.aside-links-item {
+    padding: 20px 20px 20px 30px;
+    color: #ddd;
+}
+
+.aside-links-item i{
+    padding-right: 10px;
+}
+
+.aside-links-item.active {
+    background-color: #466f8a;
+    color: #ddd;
+}
+
+.aside-links-item:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.aside-links-item-title{
+    padding: 20px 20px 10px 30px;
+    color: #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.item-subtitle{
+    padding: 20px 20px 20px 40px;
+}
+
+
+/*
+    Footer
+ */
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: #ddd;
+}
+
+
+/*
+    Main
+ */
+.main-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 20px;
+    margin: 20px;
+}
+
+.mini-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(89, 122, 237, 0.2);
+    color: #102b4a;
+}
+
+.mini-card-info{
+    font-size: 3em;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+.main-content {
+    column-count: 2;
+    column-gap: 20px;
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(89, 122, 237, 0.2);
+    -webkit-column-break-inside: avoid;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #102b4a;
+}
+
+.card p {
+    overflow-y: auto;
+    margin: 0;
+}
+
+/* Force la hauteur des différents blocs */
+.card:first-child {
+    height: 695px;
+}
+
+.card:nth-child(2) {
+    height: 200px;
+}
+
+.card:nth-child(3) {
+    height: 250px;
+}
+
+.card:nth-child(4) {
+    height: 205px;
+}
+
+
+
+
+
