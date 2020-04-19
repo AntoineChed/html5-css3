@@ -2,40 +2,36 @@
 body {
     font-family: 'Roboto'; /* Tous les textes utiliseront la police Google Font */
     font-size: 16px;
-    margin: 0;
+    margin: 0; /* On annule les marges par défaut pour que le site prenne toute la largeur et hauteur de l'écran */
 }
 
-/* Définition générale du positionnement sur la page */
+/* CSS Grid : Définition générale du positionnement sur la page */
 .grid-container {
-    display: grid; /* affichage en mode grid */
+    display: grid; /* affichage en mode CSS Grid */
     grid-template-columns: 260px 1fr; /* 2 colonnes : 1 de 260 pixels de large, l'autre du reste (fraction) */
-    grid-template-rows: 60px 1fr 42px; /* 3 lignes : 50px de haut pour le header, 50 px de haut pour le footer */
+    grid-template-rows: 60px 1fr 42px; /* 3 lignes : 60px de haut pour le header, 42 px de haut pour le footer */
     grid-template-areas:
             "aside header"
             "aside main"
-            "aside footer"; /* Disposition des élements */
+            "aside footer"; /* Disposition des différents élements */
     height: 100vh; /* hauteur : tout le viewport */
 }
 
-/* Définition des zones */
+/* CSS Grid : Définition des zones de la grille */
 .header {
     grid-area: header;
-    background-color: #466f8a;
 }
 
 .aside {
     grid-area: aside;
-    background-color: #394263;
 }
 
 .main {
     grid-area: main;
-    background-color: #ddd;
 }
 
 .footer {
     grid-area: footer;
-    background-color: #466f8a;
 }
 
 
@@ -43,10 +39,11 @@ body {
     Header
  */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* postionnement Flexible */
+    align-items: center; /* centrage vertical des élements enfants */
+    justify-content: space-between; /* défini l'espace entre les élements enfants : le premier élement aligné à gauche, le dernier à droite */
     padding: 0 16px;
+    background-color: #466f8a;
 }
 
 .header-collapse{
@@ -57,42 +54,42 @@ body {
     cursor: pointer;
 }
 
-.header-profil{
+.header-profil {
     color: #ddd;
-    display: inline-block;
+    display: inline-block; /* Pour aligner verticalement du texte avec un icone FontAwesome */
 }
 
 .header-profil i{
-    font-size:2em;
-    vertical-align: middle;
-    padding-left:10px;
+    font-size: 2em;
+    vertical-align: middle; /* Pour aligner verticalement l'icone FontAwesome quelque soit sa taille de police */
+    padding-left: 10px;
 }
 
 .header-profil:hover{
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /*
     Aside
  */
 .aside {
-    display: flex;
-    flex-direction: column;
-    grid-area: aside;
+    display: flex; /* Positionnement en boîte flexible */
+    flex-direction: column; /* Placement des élements en colonne */
+    background-color: #394263;
 }
 
-.aside-logo{
+.aside-logo {
+    display: flex; /* Autre méthode d'alignement vertical d'un texte avec son icône FontAwesome */
+    align-items: center; /* Alignement vertical du contenu */
     margin: 0;
     padding-left: 30px;
     color: white;
     font-size: 2em;
     font-weight: bold;
-    display: flex;
-    align-items: center;
     height: 60px;
 }
 
-.aside-logo i{
+.aside-logo i {
     padding-right: 10px;
 }
 
@@ -107,7 +104,7 @@ body {
     color: #ddd;
 }
 
-.aside-links-item i{
+.aside-links-item i {
     padding-right: 10px;
 }
 
@@ -116,19 +113,19 @@ body {
     color: #ddd;
 }
 
-.aside-links-item:not(.active):hover {
+.aside-links-item:not(.active):hover { /* :not() permet d'appliquer un filtre sur le sélecteur .aside-links-item */
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
 
-.aside-links-item-title{
+.aside-links-item-title {
     padding: 20px 20px 10px 30px;
     color: #ddd;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Quelque soit le text HTML, il sera affiché en majuscule */
 }
 
-.item-subtitle{
+.item-subtitle {
     padding: 20px 20px 20px 40px;
 }
 
@@ -137,30 +134,34 @@ body {
     Footer
  */
 .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Positionnement en boîtes flexibles */
+    flex-direction: row-reverse; /* Direction : ligne de droite à gauche */
+    align-items: center; /* centrage vertical du contenu des élements enfants */
     padding: 0 8px;
     color: #ddd;
+    background-color: #466f8a;
 }
 
 
 /*
     Main
  */
+.main {
+    background-color: #ddd;
+}
+
 .main-header {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-    grid-auto-rows: 100px;
-    grid-gap: 20px;
+    display: grid; /* Définition d'un conteneur avec positionnement Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive design : défini dynamiquement la largeur d'une colonne, la limite étant à 250 pixels */
+    grid-auto-rows: 100px; /* Définit la taille d'une ligne de grille : 100px de hauteur */
+    grid-gap: 20px; /* Espacement vertical et horizontal entre les élements de la grille : 20px */
     margin: 20px;
 }
 
 .mini-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Positionnement Flexible*/
+    align-items: center; /* Centrage vertical */
+    justify-content: space-between; /* Espacement horizontal maxi */
     padding: 20px;
     background-color: rgba(89, 122, 237, 0.2);
     color: #102b4a;
@@ -173,18 +174,17 @@ body {
 
 
 .main-content {
-    column-count: 2;
-    column-gap: 20px;
+    column-count: 2; /* Nb de colonnes : ici 2 */
+    column-gap: 20px; /* Espacement vertical et horizontal entre les élements de la grille : 20px */
     margin: 20px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Positionnement en boîtes flexibles */
+    flex-direction: column; /* Direction en colonnes */
     align-items: center;
     width: 100%;
     background-color: rgba(89, 122, 237, 0.2);
-    -webkit-column-break-inside: avoid;
     padding: 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
