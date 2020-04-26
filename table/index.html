@@ -242,6 +242,161 @@
                 </article>
             </section>
 
+            <section style="margin-top:50px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Fonctionnalités</h2>
+                    <ul>
+                        <li><b>moteur de recherche</b></li>
+                        <li><b>pagination</b></li>
+                        <li><b>tri par colonne</b></li>
+                        <li><b>filtre par colonne</b></li>
+                        <li><b>ordoer par colonne</b></li>
+                        <li><b>...</b></li>
+                    </ul>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Tableau HTML / CSS Avancé</h2>
+                    <p>
+                        Voici un tableau HTML / CSS largement utilisé dans les applications Web pour présenter une collection de données : <b>Datatable</b>
+                        <br>Les actions possibles sont à coder en javascript (pas implémenter dans cet exemple) et permettent de <b>filtrer</b>, <b>ordonner</b>, <b>rechercher</b> dans une grande collection de données.
+                    </p>
+                    <div id="datatable-container">
+                        <div id="datatable-header">
+                            <div id="datatable-header-lines">
+                                Lignes affichées :
+                                <select>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                    <option>40</option>
+                                    <option>50</option>
+                                </select>
+                            </div>
+                            <div id="datatable-header-search">
+                                <input type="search" name="search" value="" placeholder="Rechercher..." />
+                            </div>
+                        </div>
+                        <table class="datatable">
+                            <caption>Présentation des différents Frameworks PHP</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="sort_asc">Framework</th>
+                                    <th scope="col" class="no_sort">Année de création</th>
+                                    <th scope="col" class="no_sort">Créateur</th>
+                                    <th scope="col" class="no_sort">GitHub Stars</th>
+                                </tr>
+                                <tr class="search-filter">
+                                    <th scope="col"><input type="search" name="framework" placeholder="Nom du framework..." /></th>
+                                    <th scope="col">
+                                        <select name="annee">
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>...</option>
+                                        </select>
+                                    </th>
+                                    <th scope="col"><input type="search" name="createur" placeholder="Créateur du framework..." /></th>
+                                    <th scope="col">
+                                        <select name="stars">
+                                            <option>< 10k</option>
+                                            <option>> 10k</option>
+                                            <option>> 20k</option>
+                                            <option>> 30k</option>
+                                            <option>...</option>
+                                        </select>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Symfony</th>
+                                    <td>2005</td>
+                                    <td>SensioLabs</td>
+                                    <td>23.1k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Laravel</th>
+                                    <td>2011</td>
+                                    <td>Taylor Otwell</td>
+                                    <td>58.8k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CodeIgniter</th>
+                                    <td>2006</td>
+                                    <td>Rick Ellis</td>
+                                    <td>18k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Zend Framework</th>
+                                    <td>2006</td>
+                                    <td>Zend Technologies</td>
+                                    <td>5.7k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Yii</th>
+                                    <td>2008</td>
+                                    <td>Qiang Xu</td>
+                                    <td>4.8k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CakePHP</th>
+                                    <td>2005</td>
+                                    <td>Cake Software Foundation</td>
+                                    <td>8.1k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">FuelPHP</th>
+                                    <td>2011</td>
+                                    <td>Fuel PHP dev team</td>
+                                    <td>>1k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Phalcon</th>
+                                    <td>2012</td>
+                                    <td>Andres Gutierrez</td>
+                                    <td>10.1k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Slim PHP</th>
+                                    <td>-</td>
+                                    <td>Slim Framework Team</td>
+                                    <td>10.6k</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PEAR</th>
+                                    <td>1999</td>
+                                    <td>Stig S. Bakken</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th scope="row" colspan="3">Total stars</th>
+                                    <td>>100K</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div id="datatable-footer">
+                            <div id="datatable-footer-results">
+                                Total : <b>150 lignes</b>
+                            </div>
+                            <div id="datatable-footer-paginator">
+                                <ul class="pagination">
+                                    <li class="page"><a class="link disabled" href="#">Prec.</a></li>
+                                    <li class="page"><a class="link active" href="#">1</a></li>
+                                    <li class="page"><a class="link" href="#">2</a></li>
+                                    <li class="page"><a class="link" href="#">3</a></li>
+                                    <li class="page"><a class="link" href="#">Suiv.</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
         </div>
     </body>
 </html>
