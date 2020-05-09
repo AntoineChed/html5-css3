@@ -8,7 +8,7 @@ Il aborde les notions suivantes :
 * Envoi d'image
 * Récupération des valeurs envoyées
 
-Démo : http://www.antoinechedebois.com/html5-css3/forms/
+Démo : http://www.antoinechedebois.com/html5-css3/Ex2-Formulaires/
 
 ---
 ## Organisation du projet

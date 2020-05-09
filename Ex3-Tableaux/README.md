@@ -4,7 +4,7 @@ Les tableaux sont largement utilisés sur les sites Internet lorsqu'il s'agit de
 * Application d'un Style CSS
 * Présentation d'un tableau avancé (couramment appelé datatable)
 
-Démo : http://www.antoinechedebois.com/html5-css3/table/
+Démo : http://www.antoinechedebois.com/html5-css3/Ex3-Tableaux/
 
 ---
 ## Organisation du projet

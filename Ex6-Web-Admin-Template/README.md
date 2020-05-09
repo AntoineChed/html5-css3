@@ -6,7 +6,7 @@ Il aborde les notions suivantes :
 * Positionnement via Flexible
 * Notion de responsive design
 
-Démo : http://www.antoinechedebois.com/html5-css3/dashboard/
+Démo : http://www.antoinechedebois.com/html5-css3/Ex6-Web-Admin-Template/
 
 ---
 ## Organisation du projet

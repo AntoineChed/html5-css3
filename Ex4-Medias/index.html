@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Example 3 : Mise en forme de Tableaux</title>
+        <!-- Import d'une Police Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+        <!-- Lien vers la feuille de style CSS de la page HTML -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Import d'une bibliothèque d'icones -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Structure conditionnelle pour vérifier que HTML5 fonctionne avec d'anciennes versions du navigateur IE -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <!-- Bloc Position Fixe -->
+        <header class="header-fix">
+            <div class="header-container">
+                <h1><i class="fas fa-table"></i> Intégration d'images, vidéos, audios et de pages Web</h1>
+            </div>
+        </header>
+
+        <!-- Contenu de la page -->
+        <div class="container">
+
+            <section>
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>balise <b>img</b> : image</li>
+                        <li>attribut <b>src</b> : source du fichier image</li>
+                        <li>attribut <b>width</b> : Largeur</li>
+                        <li>attribut <b>height</b> : Hauteur</li>
+                        <li>attribut <b>alt</b> : texte alternatif</li>
+                        <li>attribut <b>title</b> : titre infobulle</li>
+                    </ul>
+                    <h3>Divers</h3>
+                    <p class="aside-info">Pour un chargement plus rapide, il est préférable que l'image se trouve dans un répertoire du site Web plutôt que sur un autre site Internet</p>
+                    <p class="aside-info">Le texte de <b>alt</b> est affiché si l'image n'est pas affichable (mauvais lien src, format pas reconnu...) ou pour les personnes malvoyantes employant un leteur d'écran</p>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Image simple</h2>
+                    <p class="marginBot50">L'intégration d'une image se fait par la balise <b>img</b> dont l'attirbut <b>src</b> pointe vers le fichier image.
+                        <br>Il est une bonne pratique de rajouter les attributs : <b>height</b> et <b>width</b> pour réserver l'espace avant affichage de l'image ainsi que l'attribut <b>alt</b> (pour contenu textuel alternatif) qui va permettre de décrire l'image.
+                    </p>
+                    <div class="content">
+                        <img src="assets/images/html5.png" height="250" width="250" alt="Logo HTML5" >
+                        <pre><code>&lt;img src="assets/images/html5.png" height="250" width="250" alt="Logo HTML5" &gt;</code></pre>
+                    </div>
+                </article>
+            </section>
+
+            <section style="margin-top:70px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>balise <b>figure</b> : unité de contenu</li>
+                        <li>balise <b>figcaption</b> : légende de l'unité de contenu</li>
+                    </ul>
+                    <h3>Divers</h3>
+                    <p class="aside-info">La balise <b>figure</b> ne s'utilise pas exclusivement avec des images mais peu aussi être employée avec des vidéos, de l'audio, des formules mathématiques...</p>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Images avec Légende</h2>
+                    <p>Il existe 2 balises HTML pour ajouter une légende à une image : <b>figure</b> et <b>figcaption</b>.</p>
+                    <div class="content">
+                        <figure>
+                            <img src="assets/images/html5.png" height="250" width="250" alt="Logo HTML5" title="Présentation d'une image légendée">
+                            <figcaption>Le Logo officiel de HTML5 disponible sur Wikipedia</figcaption>
+                        </figure>
+                    </div>
+                    <pre class="pre" style="width: 98%;"><code>&lt;figure&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="assets/images/html5.png" height="250" width="250" alt="Logo HTML5" title="Présentation d'une image légendée"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;Le Logo officiel de HTML5 disponible sur Wikipedia &lt;/figcaption&gt;<br>&lt;/figure&gt;</code></pre>
+                </article>
+            </section>
+
+            <section style="margin-top:70px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>propriété <b>background</b></li>
+                        <li>prop. <b>background-position</b></li>
+                        <li>prop. <b>background-repeat</b></li>
+                        <li>prop.
+                            <b>background-size</b>...</li>
+                    </ul>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Images décoratives CSS</h2>
+                    <p>Certaines images d'une page Web ne servent qu'à agrémenter l'aspect général du site sans apporter d'informations complémentaires au contenu textuel.<br>
+                        Dans ce cas, il est possible d'utiliser CSS pour ajouter des images décoratives en utilisation la propriété <b>background</b>.</p>
+                    <div class="content">
+                        <p class="bg-image">
+                            Ceci est mon paragraphe contenant une information hautement intéressante.<br>J'y ai ajouté une jolie image de fond qui n'apporte plus plus d'information mais c'est beau !
+                        </p>
+                    </div>
+                    <pre class="pre" style="width: 98%;"><code>background: url('../images/background-image.jpg');<br>background-repeat: no-repeat;</code></pre>
+                </article>
+            </section>
+
+            <section style="margin-top:70px;">
+                <!-- Article -->
+                <article>
+                    <h2>Images Vectorielles</h2>
+                    <p>A l'inverse des images classiques JPG, GIF, PNG... qui sont des assemblages de pixles de couleurs différentes, les images vectorielles sont un assemblage de lignes et de formes.<br>
+                        Cela a pour avantage d'obtenir des images qui ne pixellisent pas et qui peuvent s'ajuster à n'importe quel taille de conteneur. Le format  de ce type d'image est <b>SVG</b>.</p>
+                    <div class="content" style="width:100%;">
+                        <div  style="float: left;width:50%;">
+                            <figure>
+                                <img src="assets/images/HTML5_logo_and_wordmark.svg" height="125" width="125" alt="Logo HTML5 - petite taille">
+                                <figcaption>Le Logo HTML5 format SVG largeur 125px</figcaption>
+                            </figure>
+                        </div>
+                        <div style="margin-left:50%;">
+                            <figure>
+                                <img src="assets/images/HTML5_logo_and_wordmark.svg" height="250" width="250" alt="Logo HTML5 - grande taille">
+                                <figcaption>Le Logo HTML5 format SVG largeur 250px</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            <section style="margin-top:70px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>balise <b>map</b></li>
+                        <li>prop. <b>usemap</b></li>
+                    </ul>
+                    <h3>Divers</h3>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Images réactives</h2>
+                    <p>Les images réactives permettent d'associer à une image des zones réactives au passage de la souris ou bien au click de la souris.</p>
+                    <div class="content">
+                        <div id="carte">
+                            <div id="infobulle" style="display: none;"></div>
+                            <div id="map_region" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+                                <map name="MapFrance" id="MapFrance">
+                                    <!-- FRANCE -->
+                                    <area onmouseover="AffReg(1); AffBulle('Alsace - Lorraine...', 'Lorem ipsum...', event)" onmouseout="SupReg(1);" shape="poly" coords="529,131,553,135,551,144,544,149,528,193,529,198,522,214,525,221,518,231,514,231,512,233,507,223,502,219,500,215,494,210,505,192,505,187,513,179,507,175,506,166,518,151,512,145,505,146,502,141,506,135,514,140,524,139" href="" alt="">
+                                    <area onmouseover="AffReg(1); AffBulle('Alsace - Lorraine...', 'Lorem ipsum...', event)" onmouseout="SupReg(1);" shape="poly" coords="423,101,431,103,435,99,439,101,447,98,460,107,470,102,475,107,480,106,493,122,499,119,511,126,517,122,526,122,526,128,524,136,514,137,507,132,498,140,502,149,509,148,514,151,503,164,505,177,506,179,502,185,501,193,492,209,483,202,479,205,475,201,462,203,462,198,450,200,442,191,444,181,435,176,435,171,416,157,413,155,411,148,417,147,419,134,413,129,416,117" href="" alt="">
+                                    <area onmouseover="AffReg(1); AffBulle('Alsace - Lorraine...', 'Lorem ipsum...', event)" onmouseout="SupReg(1);" shape="poly" coords="388,72,400,72,410,63,410,83,416,84,431,98,429,100,422,98,412,119,411,131,415,134,413,145,408,146,412,157,432,172,431,177,442,181,441,188,441,192,449,201,441,212,441,216,436,216,430,221,418,218,413,216,416,209,400,192,379,201,376,198,365,199,358,184,353,182,354,177,346,172,348,162,352,158,349,141,359,138,358,123,363,123,361,114,377,110,380,93,388,84" href="" alt="">
+                                    <area onmouseover="AffReg(2); AffBulle('Aquitaine - Limousin...', 'Lorem ipsum...', event)" onmouseout="SupReg(2);" shape="poly" coords="135,340,146,353,152,376,154,375,153,356,160,356,161,357,163,366,170,367,177,374,185,370,185,366,197,361,197,354,203,353,209,339,215,336,226,342,235,355,240,355,240,361,234,365,242,376,242,386,234,401,233,406,227,407,222,414,222,420,215,422,214,426,218,430,217,437,209,438,207,442,203,442,197,440,187,442,180,441,176,446,174,445,160,449,160,463,154,470,167,472,168,481,171,482,171,488,160,498,160,502,155,502,153,514,139,515,134,507,113,496,110,493,106,496,101,495,106,487,101,479,94,481,94,478,88,476,101,470,110,460,116,440,124,399,135,398,130,388,128,384" href="" alt="">
+                                    <area onmouseover="AffReg(2); AffBulle('Aquitaine - Limousin...', 'Lorem ipsum...', event)" onmouseout="SupReg(2);" shape="poly" coords="224,308,244,293,255,296,286,295,288,304,301,316,300,325,290,330,294,335,293,341,296,345,295,351,295,360,286,363,283,371,278,375,277,380,272,386,246,386,246,374,238,367,243,360,244,351,235,351,228,338,220,334,232,322" href="" alt="">
+                                    <area onmouseover="AffReg(2); AffBulle('Aquitaine - Limousin...', 'Lorem ipsum...', event)" onmouseout="SupReg(2);" shape="poly" coords="151,243,166,247,171,242,195,243,199,240,208,243,208,254,218,253,229,265,235,267,235,276,240,292,230,299,220,309,228,321,214,334,208,337,201,350,196,351,194,358,183,364,178,371,173,365,165,364,166,356,160,353,152,353,141,334,132,331,130,326,120,318,120,314,126,317,134,324,144,315,143,308,147,306,138,293,141,289,156,289,160,293,168,289,166,283,165,268,169,265,158,255,158,250" href="" alt="">
+                                    <area onmouseover="AffReg(3); AffBulle('Auvergne - Rhone Alpes', 'Lorem ipsum...', event)" onmouseout="SupReg(3);" shape="poly" coords="289,296,303,289,305,277,323,273,326,277,343,281,350,277,356,288,363,291,365,301,361,307,358,307,354,322,349,328,352,334,352,342,359,357,359,367,373,366,374,371,379,371,382,377,381,383,377,383,376,389,373,389,372,394,354,402,348,399,348,395,343,395,341,400,339,399,336,394,332,390,321,395,316,406,316,402,311,401,305,392,290,408,278,407,280,399,275,394,280,380,286,373,287,367,297,362,297,352,301,346,295,340,298,336,294,331,304,326,303,312" href="" alt="">
+                                    <area onmouseover="AffReg(3); AffBulle('Auvergne - Rhone Alpes', 'Lorem ipsum...', event)" onmouseout="SupReg(3);" shape="poly" coords="359,308,361,308,365,314,379,314,388,306,400,312,404,306,407,294,423,294,420,299,430,309,433,306,440,311,459,300,464,306,456,315,456,321,471,313,472,307,479,303,494,303,496,309,491,313,496,324,502,325,502,334,492,338,493,345,498,350,501,360,508,365,506,368,506,377,500,377,496,382,485,381,473,386,465,386,463,393,470,396,470,402,462,400,451,403,443,413,437,413,434,418,437,421,437,423,428,425,424,430,429,433,434,436,438,441,433,442,428,445,422,438,416,439,419,433,403,436,397,432,385,434,384,431,378,430,373,434,368,431,367,426,362,422,357,404,374,397,376,392,379,390,379,385,384,385,387,377,382,367,376,367,374,364,361,365,362,358,355,340,355,334,352,329,358,322" href="" alt="">
+                                    <area onmouseover="AffReg(4); AffBulle('Basse - haute Normandie', 'Lorem ipsum...', event)" onmouseout="SupReg(4);" shape="poly" coords="136,74,163,73,161,84,166,95,204,102,220,97,225,111,223,126,232,129,241,147,241,161,236,166,234,171,223,165,223,159,218,155,203,158,202,152,195,146,173,151,168,146,153,143,149,148,142,144,142,141,154,140,146,133,148,101" href="" alt="">
+                                    <area onmouseover="AffReg(4); AffBulle('Basse - haute Normandie', 'Lorem ipsum...', event)" onmouseout="SupReg(4);" shape="poly" coords="218,87,231,75,271,61,277,80,273,95,276,100,272,118,263,123,260,137,242,144,234,128,226,126,228,108,223,95,238,93" href="" alt="">
+                                    <area onmouseover="AffReg(5); AffBulle('Bourgogne - Franche...', 'Lorem ipsum...', event)" onmouseout="SupReg(5);" shape="poly" coords="324,184,332,175,346,175,350,178,349,184,356,186,362,200,372,201,381,206,399,196,413,208,412,218,419,221,433,227,429,231,431,239,430,246,418,265,422,271,416,273,422,281,422,291,404,291,402,303,398,308,388,301,378,311,369,312,364,307,366,303,367,291,361,286,350,274,342,278,327,274,328,263,324,257,324,237,321,230,323,222,326,220,323,210,327,202,327,185" href="" alt="">
+                                    <area onmouseover="AffReg(5); AffBulle('Bourgogne - Franche...', 'Lorem ipsum...', event)" onmouseout="SupReg(5);" shape="poly" coords="422,301,429,307,435,304,442,307,461,296,464,287,463,279,475,271,476,264,504,240,502,238,494,238,495,235,499,233,503,232,504,225,499,220,499,216,493,213,483,205,479,210,474,203,464,205,462,201,451,203,443,212,444,219,438,221,436,219,434,223,438,227,431,235,434,244,421,265,427,272,421,276,426,284,425,293,427,295" href="" alt="">
+                                    <area onmouseover="AffReg(6); AffBulle('Bretagne', 'Lorem ipsum...', event)" onmouseout="SupReg(6);" shape="poly" coords="10,164,25,180,28,175,35,176,37,180,50,182,56,189,61,189,69,194,69,203,75,197,86,198,87,203,81,203,85,207,104,208,111,195,119,196,123,192,134,192,140,187,147,190,153,180,159,179,157,164,161,160,162,146,155,146,148,152,140,147,139,141,132,141,130,136,126,141,113,140,114,135,97,141,82,122,82,117,75,119,64,119,51,130,50,127,45,131,40,126,25,128,22,125,8,131,4,138,24,139,23,143,28,145,18,150,11,146,12,151,24,157" href="" alt="">
+                                    <area onmouseover="AffReg(7); AffBulle('Centre - Val de Loire', 'Lorem ipsum...', event)" onmouseout="SupReg(7);" shape="poly" coords="244,146,261,140,265,145,265,153,273,160,282,174,298,174,303,184,325,188,325,197,320,211,323,218,319,224,318,233,322,239,321,258,324,263,324,270,303,275,300,287,287,293,244,290,237,274,237,264,230,262,221,249,211,252,211,243,201,237,201,233,208,226,209,212,228,210,230,202,239,194,240,185,246,182,237,173,239,168,246,164" href="" alt="">
+                                    <area onmouseover="AffReg(8); AffBulle('Corse', 'Lorem ipsum...', event)" onmouseout="SupReg(8);" shape="poly" coords="540,534,543,519,546,517,547,534,550,542,549,563,543,570,539,596,535,602,527,597,521,596,521,593,518,590,524,584,523,582,515,581,517,576,516,573,512,573,517,565,511,564,511,557,513,556,513,550,519,539,529,537,535,534" href="" alt="">
+                                    <area onmouseover="AffReg(9); AffBulle('Ile de France', 'Lorem ipsum...', event)" onmouseout="SupReg(9);" shape="poly" coords="263,138,265,126,279,120,290,119,296,123,302,120,308,127,334,130,337,128,347,144,347,156,345,161,343,171,331,172,320,184,304,182,301,172,284,172,276,158,269,153,267,143" href="" alt="">
+                                    <area onmouseover="AffReg(10); AffBulle('Languedoc Roussillon...', 'Lorem ipsum...', event)" onmouseout="SupReg(10);" shape="poly" coords="252,544,258,552,269,549,280,557,288,553,294,556,299,549,312,549,314,552,316,549,309,543,307,528,312,508,321,500,332,498,343,494,352,484,363,481,369,486,372,485,374,481,382,481,380,476,388,472,389,463,399,456,393,441,393,436,381,437,380,433,377,433,375,437,364,432,365,428,360,426,353,404,346,400,345,398,342,402,337,403,335,397,330,393,322,397,317,411,321,420,322,438,331,440,330,446,335,451,332,455,331,460,324,467,319,465,315,475,311,474,304,479,299,478,293,479,297,487,290,492,277,489,276,492,266,489,262,491,258,488,256,493,251,492,250,499,261,508,260,521,256,525,258,529,263,529,268,534,260,541" href="" alt="">
+                                    <area onmouseover="AffReg(10); AffBulle('Languedoc Roussillon...', 'Lorem ipsum...', event)" onmouseout="SupReg(10);" shape="poly" coords="161,469,163,464,163,451,173,448,174,451,176,450,180,445,189,445,196,441,205,446,210,443,210,440,220,440,223,430,219,426,226,424,225,414,230,409,236,407,237,402,246,388,272,389,271,396,276,400,274,410,292,412,304,397,309,404,312,404,314,413,318,421,319,439,328,443,327,449,332,453,329,454,328,461,322,463,319,462,312,471,308,474,302,477,299,473,290,479,294,486,286,489,276,485,273,488,266,484,261,487,256,485,253,486,253,490,248,490,248,502,258,510,258,519,252,525,256,529,263,532,264,535,250,543,246,541,246,535,233,533,228,524,220,527,207,518,198,517,197,527,188,525,182,527,176,523,165,524,156,515,157,506,163,506,164,500,174,490,176,480,171,477,170,469,167,470" href="" alt="">
+                                    <area onmouseover="AffReg(11); AffBulle('Nord Pas de Calais...', 'Lorem ipsum...', event)" onmouseout="SupReg(11);" shape="poly" coords="277,42,282,13,287,8,319,4,322,17,331,25,344,21,350,38,360,39,364,49,382,53,385,69,380,73,374,67,363,70,356,67,345,70,341,64,316,60,317,54,302,53,295,45" href="" alt="">
+                                    <area onmouseover="AffReg(11); AffBulle('Nord Pas de Calais...', 'Lorem ipsum...', event)" onmouseout="SupReg(11);" shape="poly" coords="276,43,272,61,281,82,275,96,280,100,274,119,290,117,296,120,302,118,308,123,333,128,335,122,347,137,354,137,356,121,358,121,355,114,374,108,385,82,385,73,379,76,373,70,360,72,353,71,345,75,340,67,314,63,313,57,301,55,293,48" href="" alt="">
+                                    <area onmouseover="AffReg(12); AffBulle('P.A.C.A', 'Lorem ipsum...', event)" onmouseout="SupReg(12);" shape="poly" coords="376,487,375,484,382,483,384,478,390,475,392,465,403,457,396,441,397,437,404,439,414,437,411,443,419,442,427,448,433,444,438,445,440,441,437,434,429,429,430,427,440,425,442,422,438,417,441,416,445,415,450,406,461,402,469,405,473,404,473,396,467,391,475,390,483,385,495,403,502,403,502,412,494,415,493,422,494,427,495,436,508,444,522,448,532,447,536,453,529,458,524,473,513,473,504,484,500,484,492,494,485,494,481,500,481,502,486,503,480,507,471,506,470,511,460,509,459,513,449,510,449,515,436,506,423,505,423,498,418,494,406,495,405,490,399,489,395,494,387,493,383,488" href="" alt="">
+                                    <area onmouseover="AffReg(13); AffBulle('Pays de la Loire', 'Lorem ipsum...', event)" onmouseout="SupReg(13);" shape="poly" coords="165,148,174,154,194,149,198,155,202,163,216,158,220,161,220,166,238,180,237,183,236,193,228,198,225,208,208,208,203,227,198,230,198,238,195,240,168,239,164,244,144,239,153,249,155,256,165,265,162,271,162,283,166,286,160,289,157,286,141,285,135,284,124,272,119,273,115,256,107,249,110,247,109,245,117,238,107,229,113,225,127,225,111,219,100,221,95,219,96,214,105,208,110,208,111,197,122,198,126,196,134,196,139,190,146,195,155,185,154,182,164,181,160,166,164,160" href="" alt="">
+                                    <!-- DOM TOM -->
+                                    <area onmouseover="AffReg(14); AffBulle('D.O.M', 'Lorem ipsum...', event)" onmouseout="SupReg(14);" shape="rect" coords="0,540,118,570" href="" alt="">
+                                    <area onmouseover="AffReg(15); AffBulle('T.O.M', 'Lorem ipsum...', event)" onmouseout="SupReg(15);" shape="rect" coords="0,577,108,604" href="" alt="">
+                                </map>
+                                <img usemap="#MapFrance" src="assets/images/map/map_vide.png" alt="" width="557" height="606">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            <section style="margin-top:70px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>balise <b>audio</b></li>
+                        <li>prop. <b>controls</b></li>
+                    </ul>
+                    <h3>Divers</h3>
+                    <p class="aside-info">Si le navigateur ne prend pas en charge la balise <b>audio</b>, le message de la balise <b>p</b> est affichée en lieu et place.</p>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Fichier Audio</h2>
+                    <p>L'insertion d'un fichier audio s'effectue par la balise <b>audio</b>. De la même manière que la vidéo, il est possible de définir plusieurs fichiers sources au cas où le navigateur ne prenne pas en charge le format spécifié</p>
+                    <div class="content marginBot50 marginTop50" style="padding-bottom:10px;">
+                        <audio controls>
+                            <source src="assets/audio/viper.mp3" type="audio/mp3">
+                            <source src="assets/audio/viper.ogg" type="audio/ogg">
+                            <p>Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un <a href="assets/audio/viper.mp3">lien sur l'audio</a>.</p>
+                        </audio>
+                    </div>
+                    <pre class="pre" style="width: 98%;"><code>&lt;audio controls&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="assets/audio/viper.mp3" type="audio/mp3"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="assets/audio/viper.ogg" type="audio/ogg"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un &lt;a href="assets/audio/viper.mp3"&gt;lien &lt;/a&gt;.&lt;/p&gt;<br>&lt;/audio&gt;</code></pre>
+                </article>
+            </section>
+
+            <section style="margin-top:70px;">
+                <!-- Barre latérale -->
+                <aside>
+                    <h2><i class="fas fa-question"></i> Infos</h2>
+                    <h3>Balises et attributs</h3>
+                    <ul>
+                        <li>balise <b>video</b></li>
+                        <li>prop. <b>width</b></li>
+                        <li>prop. <b>height</b></li>
+                        <li>prop. <b>controls</b></li>
+                        <li>prop. <b>loop</b></li>
+                        <li>prop. <b>muted</b></li>
+                        <li>prop. <b>autoplay</b></li>
+                    </ul>
+                    <h3>Divers</h3>
+                    <p class="aside-info">Si le navigateur ne prend pas en charge la balise <b>video</b>, le message de la balise <b>p</b> est affichée en lieu et place.</p>
+                </aside>
+                <!-- Article -->
+                <article>
+                    <h2>Fichier Video</h2>
+                    <p>L'insertion d'un fichier video s'effectue par la balise <b>video</b>. Il est impératif par soucis de compatibilité de spécifier plusieurs fichiers sources au cas où le navigateur ne prenne pas en charge le format spécifié.<br>
+                        Il existe de nombreuses attributs facultatifs pur la balise video : <b>width, height, autoplay, muted, loop, poster</b>...</p>
+                    <div class="content marginBot50 marginTop50" style="padding-bottom:10px;">
+                        <video controls poster="assets/images/poster.png">
+                            <source src="assets/video/trailer.ogg" type="video/ogg">
+                            <source src="assets/video/trailer.m4v" type="video/m4v">
+                            <p>Votre navigateur ne prend pas en charge les videos HTML5.</p>
+                        </video>
+                    </div>
+                    <pre class="pre" style="width: 98%;"><code>&lt;video controls poster="assets/images/poster.png"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="assets/video/trailer.ogg" type="video/ogg"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="assets/video/trailer.m4v" type="video/m4v"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Votre navigateur ne prend pas en charge les videos HTML5.&lt;/p&gt;<br>&lt;/video&gt;</code></pre>
+                </article>
+            </section>
+
+            <section style="margin-top:70px;">
+                <!-- Article -->
+                <article>
+                    <h2>Iframes</h2>
+                    <p>Une Iframe permet d'intégrer à la page HTML d'autres pages Web : video Youtube, map interactive... </p>
+                    <div class="content" style="width:100%;">
+                        <div  style="float: left;width:50%;">
+                            <iframe width="500" height="281" src="https://www.youtube.com/embed/Wyj6Cl9IizM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div style="margin-left:50%;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10499.966498430253!2d2.2944813!3d48.8583701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1589040077932!5m2!1sfr!2sfr" width="500" height="281" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Pied de page -->
+            <footer class="marginTop50">
+                <p class="align-center">Si vous avez des questions : <a href="https://antoinechedebois.com" title="Mon CV en ligne">contactez-moi</a></p>
+            </footer>
+
+        </div>
+
+        <!-- Chargement des fichiers JS en fin de flux HTML juste avant la fermeture de body -->
+        <script src="assets/js/map.js"></script>
+    </body>
+</html>

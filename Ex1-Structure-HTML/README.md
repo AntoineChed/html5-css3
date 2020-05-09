@@ -6,7 +6,7 @@ Il aborde les notions suivantes :
 * Organisation des élements d'une page HTML (conteneur / header / menu / barre latérale / pied de page)
 * Ajout de styles sur ces élements
 
-Démo : http://www.antoinechedebois.com/html5-css3/position-fix/
+Démo : http://www.antoinechedebois.com/html5-css3/Ex1-Structure-HTML/
 
 ---
 ## Organisation du projet
