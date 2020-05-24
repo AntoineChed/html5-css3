@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Example 5 : Positionnement CSS des élements HTML</title>
+        <!-- Import d'une Police Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+        <!-- Lien vers la feuille de style CSS de la page HTML -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Import d'une bibliothèque d'icones -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Structure conditionnelle pour vérifier que HTML5 fonctionne avec d'anciennes versions du navigateur IE -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <!-- Bloc Position Fixe -->
+        <header class="header-fix">
+            <div class="header-container">
+                <h1><i class="fab fa-css3-alt"></i> Positionnement des élements en CSS</h1>
+            </div>
+        </header>
+
+        <!-- Contenu de la page -->
+        <div class="container">
+
+            <section>
+                <p>
+                    Le positionnement des élements d'une page HTML n'est pas chose aisée. CSS fournit un ensemble de méthodes qu'il est possible d'utiliser de manière cumulée :
+                </p>
+                <ul>
+                    <li><b>Marge et espacement</b> : via les propriétés <b>margin</b> et <b>padding</b></li>
+                    <li><b>Centrage</b> : vertical ou horizontal via les propriétés <b>text-align</b> et <b>vertical-align</b></li>
+                    <li><b>Type d'Affichage</b> : propriété <b>display</b></li>
+                    <li><b>Positionnement</b> : propriété <b>position</b></li>
+                    <li><b>Objet Flottant</b> : propriété <b>float</b></li>
+                </ul>
+
+                <!-- Article -->
+                <article class="marginTop50">
+                    <h2>1. Marge et Espacement</h2>
+                    <p class="marginBot20">
+                        Les marges et Espacement sont à utiliser en priorité pour positionner un bloc par rapport à un autre ou par rapport à son bloc parent.<br>
+                        La propriété <b>margin</b> permettent d'appliquer un espacement extérieur au bloc, la propriété <b>padding</b> applique un espacement intérieur au bloc.
+                    </p>
+
+                    <div style="border: 2px solid blue;">
+                        <p style="padding: 5px; margin: 15px 10px; border:1px gray dashed;">
+                            Paragraphe de texte avec un espacement intérieur de 5 pixels tout autour du texte (bordure grise en pointillée) englobé dans un bloc parent (bordure bleue) et d'un espacement extérieur de 15 pixels verical et 10 pixels horizontal.
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="border: 2px solid blue;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="padding: 5px; margin: 15px 10px; border:1px dashed gray;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paragraphe de texte avec un espacement intérieur de 5 pixels tout autour du texte (bordure grise en pointillée) englobé dans un <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bloc parent (bordure bleue) et d'un espacement extérieur de 15 pixels verical et 10 pixels horizontal<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+                </article>
+
+                <!-- Article -->
+                <article class="marginTop50">
+                    <h2>2. Centrage Horizontal et Vertical</h2>
+                    <h3>2.1 Centrage Horizontal</h3>
+                    <p class="marginBot20">
+                        Pour centrer horizontalement un texte, on utilisera la propriété <b>text-align</b>.
+                        Pour centrer horizontalement un bloc, une des méthodes est d'utiliser la technique des marges automatiques (<b>margin: auto</b> - cf.ci-dessus). Une autre est de passer par des boîtes flexibles avec la propriété <b>justify-content</b>
+                    </p>
+
+                    <div style="border: 2px solid blue;">
+                        <p style="text-align: center; width:50%; margin: auto; border:1px gray dashed;">
+                            Paragraphe de texte faisant 50% de la largeur du bloc parent, centré horizontalement et dont le texte est également centré horizontalement.
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="border: 2px solid blue;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="text-align: center; width:50%; margin: auto; border:1px dashed gray;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paragraphe de texte faisant 50% de la largeur du bloc parent, centré horizontalement et dont le texte est également centré<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;horizontalement.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <h3>2.2 Centrage Vertical</h3>
+                    <p class="marginBot20">
+                        Le centrage vertical va dépendre de l'élement conteneur.<br>
+                        Si le bloc conteneur dispose de la propriété <b>display: table-cell</b> comme une tableau par exemple, vous pouvez utiliser <b>vertical-align: middle</b>
+                        Sinon vous pouvez utiliser les boites flexibles et la propriété <b>align-items</b>
+                    </p>
+
+                    <div style="border: 2px solid blue; height: 250px; width: 500px; display: flex; align-items: center; justify-content: center;">
+                        <p style="text-align: center; width:50%; border:1px gray dashed;">
+                            Paragraphe de texte de 50% de large, centré verticalement et horizontalement dans son bloc parent.
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="border: 2px solid blue; height: 250px; width: 500px; display: flex; align-items: center; justify-content: center;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="text-align: center; width:50%; border:1px gray dashed;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paragraphe de texte de 50% de large, centré verticalement et horizontalement dans son bloc parent.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+                </article>
+
+                <article class="marginTop50">
+                    <h2>3. Type d'Affichage</h2>
+                    <p class="marginBot20">
+                        Changer le mode de rendu des élements HTML via la propriété <b>display</b> permet de facilement positionner les élements les uns par rapport aux autres.
+                        Display Block / Inline - Inline-block - Table cell - Flex (space between)
+                    </p>
+                    <h3>3.1 Display Block / Inline</h3>
+                    <p class="marginBot20">
+                        Par défaut, les principaux élements HTML utilisent les rendus block (div, p...) ou inline (a, span...).
+                        Il est possible de modifier le mode de rendu d'un élement pour changer son mode d'affichage.<br>
+                        Exemple : utiliser une liste à puce contenant des liens pour générer un menu horizontal
+                    </p>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Rubrique 1</a></li>
+                            <li><a href="#">Rubrique 2</a></li>
+                            <li><a href="#">Rubrique 3</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="marginTop50">
+                        <pre class="pre" style="width: 98%;"><code>&lt;nav&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="menu"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#">Accueil&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#">Rubrique 1&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#">Rubrique 2&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#">Rubrique 3&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#">Contact&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&lt;/nav&gt;</code></pre>
+                    </div>
+                    <h3 class="marginTop50">3.2 Display Inline-Block / Table-cell...</h3>
+                    <p class="marginBot20">
+                        D'autres type de mode de rendu permettent par exemple de mixer l'affichage inline et l'affichage block : <b>inline-block</b> qui permet d'ajouter une largeur, une hauteur, des marges et espacements à un bloc inline.<br>
+                        Le mode table-cell permet d'appliquer des propriétés d'une tableau à un bloc, généralement employé pour centrer verticalement.
+                    </p>
+                    <div>
+                        <label style="display: inline-block; width: 280px; color: green;">Le label inline-block de mon champ</label>
+                        <input type="email" name="email" placeholder="Votre email" />
+                    </div>
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label style="display: inline-block; width: 280px; color: green;"&gt;Le label inline-block de mon champ&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" name="email" placeholder="Votre email" /&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <h3 class="marginTop50">3.3 Display Flex</h3>
+                    <p>Il faudrait plusieurs TP pour couvrir toutes les possibilités apportées par les boîtes flexibles. Ce mode de rendu moderne et très puissant permet de positionner facilement des élements entre eux.</p>
+                    <div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px;">
+                        <div style="width:30%;margin:1.5%;border: 1px solid green"></div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid pink"></div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid gray"></div>
+                    </div>
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid green"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid pink"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid gray"&gt;&lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+                </article>
+
+
+                <article class="marginTop50">
+                    <h2>4. Type de Positionnement</h2>
+                    <p>
+                        Par défaut tous les élements du flux HTML sont positionnés en statique => <b>position: static</b><br>
+                        Il est possible de positionner des élements en modifiant la valeur de la propriété <b>position</b>
+                    </p>
+                    <h3>4.1 Position Fixe</h3>
+                    <p class="marginBot20">
+                        Le positionnement fixe permet de sortir du flux HTML un élement et de le placer à un endroit précis en jouant sur les propriétés top, bottom, right et left.
+                        C'est le cas par exemple du header de cette page qui est fixe et dont voici le style CSS :
+                    </p>
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>header.header-fix {<br>&nbsp;&nbsp;&nbsp;&nbsp;height: 85px;<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>&nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br>&nbsp;&nbsp;&nbsp;&nbsp;top: 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;left: 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #eee;<br>&nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 1px solid #ddd;<br>&nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);<br>}</code></pre>
+                    </div>
+
+                    <h3 class="marginTop50">4.2 Position Relative</h3>
+                    <p class="marginBot20">
+                        Le positionnement relatif conserve l'élement dans le flux mais permet de le décaler par rapport à sa position initiale via les propriétés left, right, top et bottom.<br>
+                    </p>
+                    <div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px;">
+                        <div style="width:30%;margin:1.5%;border: 1px solid green"></div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid pink;position: relative; top: 10px; left:10px;">Ce bloc est décalé de 10 pixels vers le bas et la droite</div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid gray"></div>
+                    </div>
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid green"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid pink;position: relative; top: 10px; left:10px;"&gt;Ce bloc est décalé de 10 pixels<br>&nbsp;&nbsp;&nbsp;&nbsp;vers le bas et la droite&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid gray"&gt;&lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <h3 class="marginTop50">4.3 Position Absolue</h3>
+                    <p class="marginBot20">
+                        Le positionnement en absolu sort l'élement HTML du flux et le positionne par rapport au bloc englobant (ayant la propriété de positionnement relatif) en fonction des valeurs fournies par top, left, right et / ou bottom.<br>
+                    </p>
+                    <div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px; position: relative;">
+                        <div style="width:30%;margin:1.5%;border: 1px solid green"></div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid pink;position: absolute; top: 10px; left:10px;">Ce bloc est décalé de 10 pixels vers le bas et la droite par rapport au bloc parent</div>
+                        <div style="width:30%;margin:1.5%;border: 1px solid gray"></div>
+                    </div>
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="display:flex; justify-content: space-between; border: 2px solid blue; height: 80px; position: relative;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid green"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid pink;position: relative; top: 10px; left:10px;"&gt;Ce bloc est décalé de 10 pixels<br>&nbsp;&nbsp;&nbsp;&nbsp;vers le bas et la droite par rapport au bloc parent&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style="width:30%;margin:1.5%;border: 1px solid gray"&gt;&lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+
+                </article>
+
+
+
+                <!-- Article -->
+                <article class="marginTop50">
+                    <h2>4. Objets Flottants</h2>
+                    <p class="marginBot20">
+                        Propriété très prisée auparavant, elle peut être pratique notamment pour aligner une image et du texte.
+                    </p>
+
+                    <div style="border: 2px solid blue; padding: 5px;">
+                        <img src="assets/images/html5.png" style="float:left; width: 150px; padding: 25px 5px 5px 5px;" />
+                        <p style="text-align: justify;">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre class="pre" style="width: 98%;"><code>&lt;div style="border: 2px solid blue; padding: 5px;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="assets/images/html5.png" style="float:left; width: 150px; padding: 25px 5px 5px 5px;" /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="text-align: justify;"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the ....<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>&lt;/div&gt;</code></pre>
+                    </div>
+                </article>
+
+
+            </section>
+
+
+            <!-- Pied de page -->
+            <footer class="marginTop50">
+                <p class="align-center">Si vous avez des questions : <a href="https://antoinechedebois.com" title="Mon CV en ligne">contactez-moi</a></p>
+            </footer>
+
+        </div>
+
+    </body>
+</html>

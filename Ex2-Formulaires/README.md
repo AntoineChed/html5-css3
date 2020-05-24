@@ -1,4 +1,4 @@
-# Example 4 - Formulaires simples
+# Example 2 - Formulaires simples
 Cet exemple présente des exemples de formulaires habituellement utilisés dans la réalisation de sites Web : formulaire de connexion, d'inscription et de contact.
 Il aborde les notions suivantes :
 * Types de champs (input, select, textarea, button...)

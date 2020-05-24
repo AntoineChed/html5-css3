@@ -1,4 +1,4 @@
-# Example 2 - Web Admin Template
+# Example 6 - Web Admin Template
 Cet exemple présente une structure simple de site sous forme de panneau d'administration / supervision.
 L'exemple contient la structure HTML et sa feuille de style associée.
 Il aborde les notions suivantes :
