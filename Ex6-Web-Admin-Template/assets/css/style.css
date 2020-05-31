@@ -213,6 +213,15 @@ body {
     height: 205px;
 }
 
+footer {
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
 
 
 
